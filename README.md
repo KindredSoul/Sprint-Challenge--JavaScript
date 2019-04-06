@@ -30,13 +30,28 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+    `.forEach` does not return an array while `.map` and its cousins do
+
 2. What is the difference between a function and a method?
+
+    A function is a piece of code that explicitly passed data to operate upon. Methods are similar in almost every aspect to a function except is has data passed to it implicitly from the object or class that it is attached to.
 
 3. What is closure?
 
+    Closure refers to a function within a function with lexical scope. Essential, one or more functions (children, grandchildren, etc) are nested within another function (the parent). All of the inner functions have access to functions and data outside of themselves but can not access data from functions with themselves.
+
 4. Describe the four rules of the 'this' keyword.
 
+    Global/Window - The global/window principle is this' default setting. If there is no prior instance of an object, then 'this' will bind to the window (i.e. the codepen window, vscode window, etc).
+
+    Implicit - The implicit principle means that whenever we all an object function or method, whatever is immediately left of the dot is what 'this' refers to or what it is implying. Example: With myObj.speak() myObj is the implied 'this' since it is left of the dot
+
+    Explicit - Explicit is similar to implicit, however, it differs in that you can reassign the 'this' to a new obj when calling a method by using either the call, apply, or bind keyword. Whatever is to the right of the keyword is now what 'this' refers to
+
+    New - The new principle refers to when you create a class and then create a new object using the class's constructor (probably the wrong terminology). Whenever you invoke the new object, 'this' will refer to that object. If you were to invoke 5 objects, then you would see 5 different instances of 'this'
+
 5. Why do we need super() in an extended class?
+    `super()` gives the extended class all of the properties* of the class being extended without having to retype them.
 
 ## Project Set up
 
